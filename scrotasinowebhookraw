@@ -88,6 +88,7 @@ end
 function recon(worldzz, dooridzz, xx, yy)
  if getBot().captcha == "Couldn't solve" then
     disconnect()
+    powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:PoorGT:964672185811742790> Chapcha not solved\nBot try  to reconnect\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
     sleep(10000)
     connect()
     if getBot().status == "online" then
@@ -96,6 +97,9 @@ function recon(worldzz, dooridzz, xx, yy)
       sleep(2000)
       findPath(xx,yy) 
       sleep(1000)
+      aa = os.time()
+      aaa = os.time()-aa
+      powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\nTime got restarted\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:ExcellentGT:964672053624078407> Bot Reconnected\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12") 
     end
 end
 while getBot().status == "online" and getTile(math.floor(getBot().x/32),math.floor(getBot().y/32)).fg == 6 do
@@ -105,17 +109,23 @@ while getBot().status == "online" and getTile(math.floor(getBot().x/32),math.flo
    findPath( xx, yy)
    sleep(300)
 end
+if getBot().status ~= "online" then
+   powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:PoorGT:964672185811742790> Bot Disconnected\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+end
   while getBot().status ~= "online" do
       connect() 
       sleep(10000)
-      if getBot().status == "online" then
-          sleep(3000)
-          warp(worldzz ,dooridzz) 
-          sleep(2000)
-          findPath(xx,yy) 
-          sleep(1000)
-      end
-   end
+    if getBot().status == "online" then
+      sleep(3000)
+      warp(worldzz ,dooridzz) 
+      sleep(2000)
+      findPath(xx,yy) 
+      sleep(1000)
+      aa = os.time()
+      aaa = os.time()-aa
+      powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\nTime got restarted\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:ExcellentGT:964672053624078407> Bot Reconnected\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12") 
+    end
+  end
 end
 
 function setPos(a1,b1)
@@ -332,6 +342,8 @@ function droppack()
          end
       end
    end
+   aaa = os.time()-aa
+   powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :Bot scanning profit\n"..infoPack().."\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
    sleep(2000)
    warp(list,dooridfarm) 
    sleep(2000)   
@@ -359,9 +371,70 @@ function dropseed()
          end
       end
    end
+   aaa = os.time()-aa
+   powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information : Scanning Seed profit\n\n"..infoPack().."\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
    sleep(2000)
    warp(list,dooridfarm) 
    sleep(2000)
+end
+
+items = {
+{name = "laser grid seed",id = 5667},
+{name = "laser grid block",id = 5666},
+{name = "pepper seed",id = 4585},
+{name = "pepper block",id = 4584},
+{name = "chand seed",id = 341},
+{name = "chand block",id = 340},
+{name = "fish tank seed",id = 3005},
+{name = "fish tank block",id = 3004},
+{name = "ssp",id = 5706 },
+{name = "street sign",id = 986},
+{name = "gargoyle",id = 988},
+{name = "gothic building",id = 990}, 
+{name = "streetlamp",id = 992}, 
+{name = "sidewalk",id = 994},
+{name = "tenement building",id = 996}, 
+{name = "fire escape",id = 998}, 
+{name = "fire hydrant",id = 1002}, 
+{name = "hedge",id = 1004},
+{name = "blue mailbox",id = 1006}, 
+{name = "atm machine",id = 1008}, 
+{name = "world lock",id = 242},
+{name = "surg e",id = 4296},
+{name = "surgical anesthetic",id = 1262},
+{name = "surgical antibiotics",id = 1266}, 
+{name = "surgical antisepti",id = 1264}, 
+{name = "surgical clamp",id = 4314},
+{name = "surgical defibrillator",id = 4312}, 
+{name = "surgical lab kit",id = 4318}, 
+{name = "surgical pins",id = 4308}, 
+{name = "surgical scalpel",id = 1260},
+{name = "surgical splint",id = 1268}, 
+{name = "surgical sponge",id = 1258},
+{name = "surgical stitches",id = 1270},
+{name = "surgical transfusion",id = 4310},
+{name = "surgical ultrasound",id = 4316},
+    } -- List of item info
+
+function getIP()
+    local cmd = io.popen('powershell -command "Get-NetIPAddress -AddressFamily IPv4 -InterfaceIndex $(Get-NetConnectionProfile | Select-Object -ExpandProperty InterfaceIndex) | Select-Object -ExpandProperty IPAddress"')
+    IP = cmd:read("*l")
+    cmd:close()
+    return IP
+end
+
+function getCpu()
+    local cmd = io.popen('powershell -command "Get-WmiObject Win32_Processor | Measure-Object -Property LoadPercentage -Average | Select -ExpandProperty Average"')
+    local cpu = cmd:read("*l")
+    cmd:close()
+    return cpu
+end
+
+function getRam()
+    local cmd = io.popen('powershell -command "$CompObject =  Get-WmiObject -Class WIN32_OperatingSystem; $Memory = ((($CompObject.TotalVisibleMemorySize - $CompObject.FreePhysicalMemory)*100)/ $CompObject.TotalVisibleMemorySize); [math]::Round($Memory, 0)"')
+    local ram = cmd:read("*l")
+    cmd:close()
+    return ram
 end
 
 function ready()
@@ -404,10 +477,86 @@ function scanseed(id)
    return m
 end
 
+function itemInfo(ids)
+    local result = {name = "null", id = ids}
+    for _,item in pairs(items) do
+        if item.id == ids then
+            result.name = item.name
+            return result
+        end
+    end
+    return result
+end
+
+function infoPack()
+    local store = {}
+    for _,obj in pairs(getObjects()) do
+        if store[obj.id] then
+            store[obj.id].count = store[obj.id].count + obj.count
+        else
+            store[obj.id] = {id = obj.id, count = obj.count}
+        end
+    end
+    local str = ""
+    for _,object in pairs(store) do
+        str = str.."\n"..itemInfo(object.id).name.." : x"..object.count
+    end
+    return str
+end
+
+function powershell(message)
+local script = [[
+$webHookUrl = ']] ..webhook.. [['
+$cpu = (Get-WmiObject win32_processor | Measure-Object -property LoadPercentage -Average | Select Average).Average
+$ram = (Get-Counter '\Memory\Available MBytes').CounterSamples.CookedValue[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+[System.Collections.ArrayList]$embedArray = @()
+
+$title       = '**Rotation Script Logs**'
+
+$color       = '1'
+
+$description = ']] .. message .. [['
+$footerObject = @{
+        text = 'Date & Time : ]]..(os.date("!%a %b %d, %Y at %I:%M %p", os.time() + 7 * 60 * 60))..[['
+    }
+$thumbnailObject = @{
+            url = 'https://media.discordapp.net/attachments/1035446353008001038/1045320042922922014/20221124_194825.png?width=390&height=390'        
+            }
+
+}
+
+$embedObject = [PSCustomObject]@{
+    title       = $title
+    description = $description
+    username    = $user
+    color       = $color
+    thumbnail   = $thumbnailObject
+    footer      = $footerObject
+}
+
+$embedArray.Add($embedObject) | Out-Null
+
+$payload = [PSCustomObject]@{
+
+    embeds = $embedArray
+
+}
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Invoke-RestMethod -Uri $webHookUrl -Body ($payload | ConvertTo-Json -Depth 4) -Method Post -ContentType 'application/json'
+  ]]
+  
+local pipe = io.popen("powershell -WindowStyle Hidden -ExecutionPolicy Bypass -command -", "w")
+  pipe:write(script)
+  pipe:close()
+end
+
     PickaxeControl()
     sleep(500)
     warp(list,dooridfarm) 
     sleep(500)
+    tt = os.time()
+    aaa = os.time()-aa
+    powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n:evergreen_tree:Three Ready / Unready :"..ready().." / "..unready().."\n-----------------------------------\n:loudspeaker:Information : Script Started\nBot Start Harvesting Three\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
     repeat
       harvest() 
       sleep(100)
@@ -428,11 +577,30 @@ end
          sleep(3000)
       end
       sleep(2000)
-      until 
+        until 
       getBot().world == list and ready(seedId) == 0
       plant(seedId) 
       sleep(200)
-    end
+      tt = os.time() - tt
+      aaa = os.time()-aa
+      powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n:evergreen_tree:Three Ready / Unready :"..ready().." / "..unready().."\n-----------------------------------\n:loudspeaker:Information : Finished the world\n:timer:Time has passed :"..math.floor(tt%86400/3600).." Hours "..math.floor(tt%3600/60).." Minutes\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+   end
 end
 
-main()
+function botstarts()
+if worldloop == true then
+    while true do
+      main()
+      sleep(2000)
+    end
+  end
+
+  if worldloop == false then
+    main()
+    sleep(2000)
+    removeBot(getBot().name)
+    sleep(5000)
+  end
+end
+
+botstarts()    

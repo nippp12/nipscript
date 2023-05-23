@@ -434,3 +434,5 @@ end
       sleep(200)
     end
 end
+
+main()

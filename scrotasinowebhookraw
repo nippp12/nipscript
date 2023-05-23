@@ -88,7 +88,7 @@ end
 function recon(worldzz, dooridzz, xx, yy)
  if getBot().captcha == "Couldn't solve" then
     disconnect()
-    powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:PoorGT:964672185811742790> Chapcha not solved\nBot try  to reconnect\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+    powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\n:loudspeaker:Bot doing\n\n<:PoorGT:964672185811742790> Chapcha not solved\nBot try  to reconnect\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12")
     sleep(10000)
     connect()
     if getBot().status == "online" then
@@ -99,7 +99,7 @@ function recon(worldzz, dooridzz, xx, yy)
       sleep(1000)
       aa = os.time()
       aaa = os.time()-aa
-      powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\nTime got restarted\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:ExcellentGT:964672053624078407> Bot Reconnected\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12") 
+      powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\nTime got restarted\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\n:loudspeaker:Bot doing\n\n<:ExcellentGT:964672053624078407> Bot Reconnected\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12") 
     end
 end
 while getBot().status == "online" and getTile(math.floor(getBot().x/32),math.floor(getBot().y/32)).fg == 6 do
@@ -110,7 +110,7 @@ while getBot().status == "online" and getTile(math.floor(getBot().x/32),math.flo
    sleep(300)
 end
 if getBot().status ~= "online" then
-   powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:PoorGT:964672185811742790> Bot Disconnected\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+   powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\n:loudspeaker:Bot doing\n\n<:PoorGT:964672185811742790> Bot Disconnected\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12")
 end
   while getBot().status ~= "online" do
       connect() 
@@ -123,7 +123,7 @@ end
       sleep(1000)
       aa = os.time()
       aaa = os.time()-aa
-      powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\nTime got restarted\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :\n<:ExcellentGT:964672053624078407> Bot Reconnected\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12") 
+      powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\nTime got restarted\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\n:loudspeaker:Bot doing\n\n<:ExcellentGT:964672053624078407> Bot Reconnected\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12") 
     end
   end
 end
@@ -343,7 +343,7 @@ function droppack()
       end
    end
    aaa = os.time()-aa
-   powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information :Bot scanning profit\n"..infoPack().."\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+   powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\n:loudspeaker:Bot doing\nBot scanning profit\n"..infoPack().."\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12")
    sleep(2000)
    warp(list,dooridfarm) 
    sleep(2000)   
@@ -372,7 +372,7 @@ function dropseed()
       end
    end
    aaa = os.time()-aa
-   powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n-----------------------------------\n:loudspeaker:Information : Scanning Seed profit\n\n"..infoPack().."\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+   powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\n:loudspeaker:Bot doing\n Scanning Seed profit\n\n"..infoPack().."\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12")
    sleep(2000)
    warp(list,dooridfarm) 
    sleep(2000)
@@ -556,7 +556,7 @@ end
     sleep(500)
     tt = os.time()
     aaa = os.time()-aa
-    powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n:evergreen_tree:Three Ready / Unready :"..ready().." / "..unready().."\n-----------------------------------\n:loudspeaker:Information : Script Started\nBot Start Harvesting Three\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+    powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\nReady / Unready :"..ready().." / "..unready().."\n:loudspeaker:Bot doing\n Script Started\nBot Start Harvesting Three\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12")
     repeat
       harvest() 
       sleep(100)
@@ -583,7 +583,7 @@ end
       sleep(200)
       tt = os.time() - tt
       aaa = os.time()-aa
-      powershell("\n-----------------------------------\n:crown:Bot Name :||"..getBot().name.."||("..getBot().level.."\n)\nStatus :"..getBot().status.." "..getBot().captcha.."\n:gem:Gems :"..findItem(112).." Slots :"..getBot().slots.." \n:clock7:Bot Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n-----------------------------------\n:earth_asia:World :||"..getBot().world.."|| :rock:("..fossil(3918)..")\n:evergreen_tree:Three Ready / Unready :"..ready().." / "..unready().."\n-----------------------------------\n:loudspeaker:Information : Finished the world\n:timer:Time has passed :"..math.floor(tt%86400/3600).." Hours "..math.floor(tt%3600/60).." Minutes\n-----------------------------------\n:desktop:Cpu :"..getCpu().." %\n:floppy_disk:Memory :"..getRam().." %\n:globe_with_meridians:IP :"..getIP().."\n-----------------------------------\n<a:bcrown:969655781534363648>Author : Nippp_12")
+      powershell("\n:crown:Bot Info \nName :||"..getBot().name.."|| "..getBot().level.." lvl\nStatus :"..getBot().status.."\nCaptcha : "..getBot().captcha.."\nGems :"..findItem(112).."/ :"..getBot().slots.." BP \n Uptime :"..math.floor(aaa/86400).." Days "..math.floor(aaa%86400/3600).." Hours "..math.floor(aaa%3600/60).." Minutes\n:earth_asia:World Info \nName :||"..getBot().world.."|| \n Fossil :("..fossil(3918)..")\nReady / Unready :"..ready().." / "..unready().."\n:loudspeaker:Bot doing\n Finished the world\n:timer:Time has passed :"..math.floor(tt%86400/3600).." Hours "..math.floor(tt%3600/60).." Minutes\n:desktop:RDP INFO\nCpu :"..getCpu().." %\nMemory :"..getRam().." %\nIP :||"..getIP().."||\n<a:bcrown:969655781534363648>Author : Nippp_12")
    end
 end
 
@@ -603,4 +603,4 @@ if worldloop == true then
   end
 end
 
-botstarts()    
+botstarts()
